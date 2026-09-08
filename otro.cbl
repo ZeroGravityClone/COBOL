@@ -5,7 +5,7 @@
       * Tectonics: cobc
       ***********************************************
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. PRACTICA.
+       PROGRAM-ID. OPERACIONES.
 
        DATA DIVISION.
        WORKING-STORAGE SECTION.
@@ -50,3 +50,5 @@
            END-IF.
 
            STOP RUN.
+
+      *CODIGO GENERADO POR IA, usa COMPUTE el cual consume recursos de mas
