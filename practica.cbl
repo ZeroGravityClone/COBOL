@@ -6,6 +6,11 @@
       ***********************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. HELLO-WORLD.
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
        PROCEDURE DIVISION.
-           DISPLAY 'Hello, World!'.
+       MAIN-PROCEDURE.
+           DISPLAY "HOLA MUNDO"
            STOP RUN.
+       END PROGRAM HELLO-WORLD.

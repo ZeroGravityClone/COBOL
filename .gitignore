@@ -1,18 +1,30 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Archivos ejecutables y binarios compilados
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.out
 
-# Other files and folders
-.settings/
+# Archivos objeto e intermediarios
+*.o
+*.obj
+*.c
+*.h
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Archivos de listado y listados de compilación
+*.lst
+*.lis
+*.prn
+*.rpt
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Archivos temporales y de depuración
+*.tmp
+*.chk
+*.pdb
+*.ilk
+
+# Archivos de configuración de editores comunes (opcional)
+.vscode/
+.idea/
+*.swp
