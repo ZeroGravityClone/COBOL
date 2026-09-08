@@ -5,6 +5,7 @@
 *.dylib
 *.bin
 *.out
+*.psc
 
 # Archivos objeto e intermediarios
 *.o
