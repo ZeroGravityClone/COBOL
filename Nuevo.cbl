@@ -12,16 +12,12 @@
        01  CONTADOR PIC 9(2) VALUE 1.
 
        PROCEDURE DIVISION.
-           PERFORM 100-LOOP THRU 100-EXIT.
+           PERFORM UNTIL CONTADOR > 10
+            DISPLAY 'Iteracion: ' CONTADOR
+           ADD +1 TO CONTADOR
+           END-PERFORM.
 
-        100-LOOP.
-            DISPLAY 'Iteracion1: ' CONTADOR.
-            ADD 1 TO CONTADOR.
-            DISPLAY 'Iteracion2: ' CONTADOR.
-            SUBTRACT 1 FROM CONTADOR.
-            DISPLAY 'Iteracion3: ' CONTADOR.
-        100-EXIT.
-            DISPLAY 'Finalizado'. 
+           DISPLAY 'Finalizado'.
 
            STOP RUN.
        END PROGRAM practica.
