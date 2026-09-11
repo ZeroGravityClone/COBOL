@@ -9,26 +9,46 @@
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
-       77  I     PICTURE 9 VALUE 0.
-       01  NUMEROS OCCURS 5 TIMES.
-           02 NUMERO PIC 9(2).
+       77  WS-CADENA PICTURE IS XXXXX.
+       77  WS-CADENA-ALFAB PIC A(30).
+       77  WS-CADENA-ALFAN PIC X(30).
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
-           
-            MOVE 10 TO NUMERO(1).
-            MOVE 20 TO NUMERO(2).
-            MOVE 30 TO NUMERO(3).
-            MOVE 40 TO NUMERO(4).
-            MOVE 50 TO NUMERO(5).
-       BEGIN.
-           DISPLAY "Ingresa un numero de indice del Array"
-           DISPLAY "Entre 1 y 5"
-           ACCEPT I.
-            IF I > 0 AND < 6
-            DISPLAY "el dato en la posicion " I " es " NUMERO(I)
-            ELSE DISPLAY "El indice solicitado es erroneo: " I
-                 DISPLAY "Debe ser entre 1 y 5"
-                 GO TO BEGIN.
+       PROGRAM-BEGIN.
+           DISPLAY "Introduce cualquier cadena: ".
+           ACCEPT WS-CADENA.
+           DISPLAY "Cualquier cadena es: " WS-CADENA.
+           DISPLAY "Longitud: "FUNCTION LENGTH(WS-CADENA).
+           DISPLAY "MAYUSCULA: "FUNCTION UPPER-CASE(WS-CADENA).
+           DISPLAY "MINUSCULA: "FUNCTION LOWER-CASE(WS-CADENA).
+           DISPLAY "-----------------------------------------".
+
+           DISPLAY "Introduce una cadena ALFABETICA".
+           ACCEPT WS-CADENA-ALFAB.
+           DISPLAY "La cedena ALFABETICA es: " WS-CADENA-ALFAB.
+           DISPLAY "Longitud: "FUNCTION LENGTH(WS-CADENA-ALFAB).
+           DISPLAY "MAYUSCULA: "FUNCTION UPPER-CASE(WS-CADENA-ALFAB).
+           DISPLAY "MINUSCULA: "FUNCTION LOWER-CASE(WS-CADENA-ALFAB).
+           DISPLAY "-----------------------------------------".
+
+           DISPLAY "Introduce una cadena ALFANUMERICA".
+           ACCEPT WS-CADENA-ALFAN.
+           DISPLAY "La cedena NUMERICA es: " WS-CADENA-ALFAN.
+           DISPLAY "Longitud: "FUNCTION LENGTH(WS-CADENA-ALFAN).
+           DISPLAY "MAYUSCULA: "FUNCTION UPPER-CASE(WS-CADENA-ALFAN).
+           DISPLAY "MINUSCULA: "FUNCTION LOWER-CASE(WS-CADENA-ALFAN).
+           DISPLAY "-----------------------------------------".
+
+       PROGRAM-DONE.
+           PERFORM ES-ALFABETICA
            STOP RUN.
+
+       ES-ALFABETICA.
+            IF WS-CADENA-ALFAB IS ALPHABETIC THEN
+            DISPLAY "CADENA ALFABETICA VERIFICADA ES: " WS-CADENA-ALFAB
+                ELSE
+            DISPLAY "ESTA CADENA NO ES ALFABETICA: " WS-CADENA-ALFAB
+            END-IF.
+
        END PROGRAM COBRA.
       *Este programa esta hecho de forma manual
