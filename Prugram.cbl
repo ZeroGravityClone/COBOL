@@ -19,11 +19,11 @@
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
        MAIN-LOGIC.
-           MOVE 5 TO ELEMENT(1)
-           MOVE 1 TO ELEMENT(2)
-           MOVE 4 TO ELEMENT(3)
-           MOVE 2 TO ELEMENT(4)
-           MOVE 3 TO ELEMENT(5)
+           MOVE 1 TO ELEMENT(1)
+           MOVE 2 TO ELEMENT(2)
+           MOVE 3 TO ELEMENT(3)
+           MOVE 4 TO ELEMENT(4)
+           MOVE 5 TO ELEMENT(5)
 
            DISPLAY "Array antes de ordenado: "
            PERFORM DISPLAY-ELEMENTOS
@@ -39,7 +39,7 @@
            PERFORM UNTIL N = 1
             MOVE 1 TO I
              PERFORM UNTIL I >= N
-               IF ELEMENT(I) > ELEMENT(I + 1)
+               IF ELEMENT(I) < ELEMENT(I + 1)
                    MOVE ELEMENT(I) TO TEMP
                    MOVE ELEMENT(I + 1) TO ELEMENT(I)
                    MOVE TEMP TO ELEMENT(I + 1)
